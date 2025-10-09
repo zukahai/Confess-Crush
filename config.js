@@ -1,6 +1,6 @@
-const CONFIG = {
-    titleWeb: "Tiêu đề web",
-    introTitle: 'Tên người yêu bạn',
+const CONFIG = {DEMO
+    titleWeb: "bé duyên cutephomaique",
+    introTitle: 'hé nhô cục zàng của chụyyyy',
     introDesc: `Trái đất vốn lạ thường
     Mà sao em cứ đi nhầm đường
     Lạc vào tim anh lẻ loi
