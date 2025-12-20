@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"n>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confession Game 💌</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+    .no {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="game">
+    <h1>Confession Time 💖</h1>
+    <p id="question">Do you have a crush on me?</p>
+    <button class="yes" onclick="yesClick()">Yes</button>
+    <button class="no" onclick="noClick()">No</button>
+  </div>  <script>
+    let noCount = 0;
+
+    function yesClick() {
+      document.getElementById("game").innerHTML = `
+        <h1>💘 Aww!</h1>
+        <p>Thanks for being honest. That made my day 😊</p>
+      `;
+    }
+
+    function noClick() {
+      noCount++;
+      const questions = [
+        "Are you sure? 🤔",
+        "Think again 😳",
+        "Last chance 😅",
+        "Okay… but I still like you 💕"
+      ];
+      document.getElementById("question").innerText = questions[Math.min(noCount, questions.length - 1)];
+    }
+  </script></body>
+</html>
